@@ -1,0 +1,75 @@
+<PolicyRules>
+    <PolicyRule Id="{c9d4a433-ddf4-4af3-af2c-35da0bb5eabe}">
+    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bc9d4a433-ddf4-4af3-af2c-35da0bb5eabe%7d/RuleData -->
+        <Name>Policy 1 Allow Read Only</Name>
+        <IncludedIdList>
+            <GroupId>{87b4d605-2e92-4e1f-a403-a0a5e927a019}</GroupId>
+        </IncludedIdList>
+        <ExcludedIdList></ExcludedIdList>
+        <Entry Id="{66c409bd-595b-4af9-ab86-8fb904e80503}">
+            <Type>Allow</Type>
+            <Options>0</Options><!--Do nothing-->
+            <Sid>917e8f2f-eb8f-46e6-815e-469c621c64e2</Sid><!-- USB Readers Group SID.-->
+            <AccessMask>9</AccessMask><!--Allow Read only-->
+        </Entry>
+        <Entry Id="{f3c34e3a-fb82-46dd-a0b3-9d296f8be981}">
+            <Type>AuditAllowed</Type>
+            <Options>2</Options><!--Send event-->
+            <Sid>917e8f2f-eb8f-46e6-815e-469c621c64e2</Sid><!-- USB Readers Group SID.-->                       
+            <AccessMask>9</AccessMask><!--Audit Allowed Read-->
+        </Entry>
+        <Entry Id="{134917af-f271-4bf4-abe7-4c807e9d4bac}">
+            <Type>Deny</Type>
+            <Options>0</Options><!--Do nothing-->
+            <Sid>917e8f2f-eb8f-46e6-815e-469c621c64e2</Sid><!-- USB Readers Group SID.-->
+            <AccessMask>54</AccessMask><!--Deny Write and Execute-->
+        </Entry>
+        <Entry Id="{6cbd2121-33ce-426e-9d2b-c377dbcd2015}">
+            <Type>AuditDenied</Type>
+            <Options>3</Options><!--Show notification and send event-->
+            <Sid>917e8f2f-eb8f-46e6-815e-469c621c64e2</Sid><!-- USB Readers Group SID.-->
+            <AccessMask>54</AccessMask><!--Audit Denied Write and Execute-->
+        </Entry>
+    </PolicyRule>
+    <PolicyRule Id="{76cd8f18-1ad2-4fed-8f97-50c845fb4b20}">
+    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b76cd8f18-1ad2-4fed-8f97-50c845fb4b20%7d/RuleData -->
+        <Name>Policy 2 Allow Read Write Execute</Name>
+        <IncludedIdList>
+            <GroupId>{87b4d605-2e92-4e1f-a403-a0a5e927a019}</GroupId>
+        </IncludedIdList>
+        <ExcludedIdList></ExcludedIdList>
+        <Entry Id="{34d15f1b-9261-4158-a16d-5bcd031b6f77}">
+            <Type>Allow</Type>
+            <Options>8</Options><!--Create copy of file as evidence, send RemovableStorageFileEvent-->
+            <Sid>3a1a9396-1e56-4586-96fe-b95fec75db29</Sid><!-- USB R,W,X Users Group SID.-->                        	
+            <ComputerSid>53f597aa-d32b-435a-af7a-19d834a0e1ba</ComputerSid><!-- USB R,W,X Allowed Workstation Group SID.-->
+            <AccessMask>63</AccessMask><!--Allow Read, Write and Execute-->
+        </Entry>
+        <Entry Id="{b39f1946-3466-42f6-a80c-056897c6236b}">
+            <Type>AuditAllowed</Type>
+            <Options>2</Options><!--Send event-->
+            <Sid>3a1a9396-1e56-4586-96fe-b95fec75db29</Sid><!-- USB R,W,X Users Group SID.-->                        
+            <ComputerSid>53f597aa-d32b-435a-af7a-19d834a0e1ba</ComputerSid><!-- USB R,W,X Allowed Workstation Group SID.-->
+            <AccessMask>63</AccessMask><!--Audit Allowed Read, Write and Execute-->
+        </Entry>
+    </PolicyRule>
+    <PolicyRule Id="{a55fe246-1a83-4e07-a491-79d00351b0a5}">
+    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7ba55fe246-1a83-4e07-a491-79d00351b0a5%7d/RuleData -->
+        <Name>Policy 3 Block</Name>
+        <IncludedIdList>
+            <GroupId>{1cf8c2ff-bc5d-47ee-8f9f-c8481e6053c7}</GroupId>
+        </IncludedIdList>
+        <ExcludedIdList>
+        </ExcludedIdList>
+        <Entry Id="{dac8ef46-95b7-46e5-83b3-a5f9455de8fe}">
+            <Type>Deny</Type>
+            <Options>0</Options><!--Do Nothing-->
+            <AccessMask>63</AccessMask><!--Deny Read, Write and Execute-->
+        </Entry>
+        <Entry Id="{db768cbe-2645-47a8-bcd2-f61b577ae768}">
+            <Type>AuditDenied</Type>
+            <Options>3</Options><!--Show notification, send event-->
+            <AccessMask>63</AccessMask><!--Audit Denied Read, Write and Execute-->
+        </Entry>
+    </PolicyRule>
+</PolicyRules>

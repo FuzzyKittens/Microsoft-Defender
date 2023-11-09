@@ -1,0 +1,21 @@
+<Groups>
+    <Group Id="{87b4d605-2e92-4e1f-a403-a0a5e927a019}">
+    <!-- Group 1: Allow Approved USBs for Write and Execute Access and Audit -->
+    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b87b4d605-2e92-4e1f-a403-a0a5e927a019%7d/GroupData -->
+        <MatchType>MatchAny</MatchType>
+        <DescriptorIdList>
+            <!--This is your allowed hardware list, add entries for allowed devices here-->
+            <InstancePathId>USBSTOR\DISK&amp;VEN_VERBATIM&amp;PROD_STORE_N_GO&amp;REV_5.00\070007B81D024A5B01D0&amp;*</InstancePathId>
+        </DescriptorIdList>
+    </Group>
+    <Group Id="{1cf8c2ff-bc5d-47ee-8f9f-c8481e6053c7}">
+    <!--Group 2: Block Any removable storage, CD/DVD, or WPD device -->
+    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b1cf8c2ff-bc5d-47ee-8f9f-c8481e6053c7%7d/GroupData -->
+        <MatchType>MatchAny</MatchType>
+        <DescriptorIdList>
+            <PrimaryId>RemovableMediaDevices</PrimaryId>
+            <PrimaryId>CdRomDevices</PrimaryId>
+            <PrimaryId>WpdDevices</PrimaryId>
+        </DescriptorIdList>
+    </Group>
+</Groups>

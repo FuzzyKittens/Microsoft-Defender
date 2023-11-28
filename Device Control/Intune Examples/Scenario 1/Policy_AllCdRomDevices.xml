@@ -1,7 +1,7 @@
 <PolicyRule Id="{28ef8811-f86e-4389-983a-524029b78370}">
-	<!--Policy_AllCdRomDevices_Permissions:Allow Read Only for all and Write by AD Group-->
+	<!--Policy_AllCdRomDevices:Allow Read Only for all and Write by AD Group-->
 	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b28ef8811-f86e-4389-983a-524029b78370%7d/RuleData-->
-	<Name>Policy_AllCdRomDevices_Permissions</Name>
+	<Name>Policy_AllCdRomDevices</Name>
 	<IncludedIdList>
 		<GroupId>{6dd2869c-e369-46d2-83c0-cbc7251fd17d}</GroupId>
 	</IncludedIdList>

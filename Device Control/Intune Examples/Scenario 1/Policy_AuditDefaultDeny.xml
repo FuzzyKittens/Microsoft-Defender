@@ -1,7 +1,7 @@
 <PolicyRule Id="{1fbdeb31-0bee-4e0a-a3f7-4ee2d85fe18e}">
-	<!--Policy_Audit_Default_Deny:Audit Default Deny-->
+	<!--Policy_AuditDefaultDeny:Audit Default Deny-->
 	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b1fbdeb31-0bee-4e0a-a3f7-4ee2d85fe18e%7d/RuleData-->
-	<Name>Policy_Audit_Default_Deny</Name>
+	<Name>Policy_AuditDefaultDeny</Name>
 	<IncludedIdList />
 	<ExcludedIdList />
 	<Entry Id="{c1ad5c1a-8ce1-48d6-8ab1-4356cccc0efa}">

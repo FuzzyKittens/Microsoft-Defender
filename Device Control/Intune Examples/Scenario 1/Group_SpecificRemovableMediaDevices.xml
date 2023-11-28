@@ -1,0 +1,9 @@
+<Group Id="{39a76f23-ccba-44ec-b131-941baf0ab689}">
+	<!--Group_SpecificRemovableMediaDevices:Specific RemovableMedia Devices-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b39a76f23-ccba-44ec-b131-941baf0ab689%7d/GroupData-->
+	<MatchType>MatchAny</MatchType>
+	<DescriptorIdList>
+		<InstancePathId>USBSTOR\DISK&amp;VEN_VERBATIM&amp;PROD_STORE_N_GO&amp;REV_5.00\070007B81D024A5B01D0&amp;*</InstancePathId>
+		<InstancePathId>SCSI\DISK&amp;VEN_NVME&amp;PROD_SAMSUNG_MZFLW1T0\5&amp;24D1C0C3&amp;*</InstancePathId>
+	</DescriptorIdList>
+</Group>

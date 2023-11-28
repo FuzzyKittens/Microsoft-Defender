@@ -1,0 +1,21 @@
+<PolicyRule Id="{77ea6638-571e-4917-800c-8548ffaf6c42}">
+	<!--Policy_ETP1:1:1 Device to User Policy-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b77ea6638-571e-4917-800c-8548ffaf6c42%7d/RuleData-->
+	<Name>Policy_ETP1</Name>
+	<IncludedIdList>
+		<GroupId>{9fb02d1c-54dd-47a8-974a-40135a2216c2}</GroupId>
+	</IncludedIdList>
+	<ExcludedIdList />
+	<Entry Id="{25d9a2ae-9fa3-408e-a6bb-0711449ffbb5}">
+		<Type>Allow</Type>
+		<AccessMask>9</AccessMask><!--Allow Read-->
+		<Options>0</Options><!--Do nothing-->
+		<sid>d9a7820e-65ca-436a-b404-8302b41825da</sid><!-- AD User SID-->
+	</Entry>
+	<Entry Id="{05873916-09ce-434a-9930-ae54e772d894}">
+		<Type>AuditAllowed</Type>
+		<AccessMask>9</AccessMask><!--Audit Allowed Read-->
+		<Options>2</Options><!--Send event-->
+		<sid>d9a7820e-65ca-436a-b404-8302b41825da</sid><!-- AD User SID-->
+	</Entry>
+</PolicyRule>

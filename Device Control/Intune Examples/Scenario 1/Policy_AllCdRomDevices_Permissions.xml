@@ -1,0 +1,25 @@
+<PolicyRule Id="{28ef8811-f86e-4389-983a-524029b78370}">
+	<!--Policy_AllCdRomDevices_Permissions:Allow Read Only for all and Write by AD Group-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b28ef8811-f86e-4389-983a-524029b78370%7d/RuleData-->
+	<Name>Policy_AllCdRomDevices_Permissions</Name>
+	<IncludedIdList>
+		<GroupId>{6dd2869c-e369-46d2-83c0-cbc7251fd17d}</GroupId>
+	</IncludedIdList>
+	<ExcludedIdList></ExcludedIdList>
+	<Entry Id="{fda8228d-f9ae-4610-bbe8-ba5c10a1a73c}"><!-- AllCdRomDevices-->
+		<Type>Allow</Type>
+		<AccessMask>9</AccessMask><!--Allow Read-->
+		<Options>0</Options><!--Do nothing-->
+	</Entry>
+	<Entry Id="{4d4618d5-c7e2-4250-a1c0-1def7ae1fa7e}">
+		<Type>Allow</Type>
+		<AccessMask>27</AccessMask><!--Allow Read and Write-->
+		<Options>0</Options><!--Do nothing-->
+		<sid>ff5bb101-7370-42aa-b214-bca6655c8a9b</sid><!-- CDROM Writers Group SID.-->
+	</Entry>
+	<Entry Id="{9699bfd7-e85d-4569-972f-6505610f4eb2}">
+		<Type>AuditAllowed</Type>
+		<AccessMask>27</AccessMask><!--Audit Allowed Read and Write-->
+		<Options>2</Options><!--Send event-->
+	</Entry>
+</PolicyRule>

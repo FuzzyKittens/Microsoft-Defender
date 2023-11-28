@@ -1,0 +1,21 @@
+<PolicyRule Id="{94935edf-e1d4-472b-afb0-088cee08810f}">
+	<!--Policy_SpecificRemovableMediaDevices_Permissions:Allow Read by AD Group and Specific Device Group-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b94935edf-e1d4-472b-afb0-088cee08810f%7d/RuleData-->
+	<Name>Policy_SpecificRemovableMediaDevices_Permissions</Name>
+	<IncludedIdList>
+		<GroupId>{39a76f23-ccba-44ec-b131-941baf0ab689}</GroupId><!-- SpecificRemovableMediaDevices-->
+	</IncludedIdList>
+	<ExcludedIdList />
+	<Entry Id="{c49e16d0-d77d-43d0-a035-c3c73e4adcdd}">
+		<Type>Allow</Type>
+		<AccessMask>9</AccessMask><!--Allow Read-->
+		<Options>0</Options><!--Do nothing-->
+		<sid>ad143ef8-7cc5-4a92-b99e-94a985d09a5f</sid><!-- USB Readers Group SID.-->
+	</Entry>
+	<Entry Id="{52451ec9-9849-418b-b4f3-2d884d4ccac9}">
+		<Type>AuditAllowed</Type>
+		<AccessMask>9</AccessMask><!--Audit Allowed Read-->
+		<Options>2</Options><!--Send event-->
+		<sid>ad143ef8-7cc5-4a92-b99e-94a985d09a5f</sid><!-- USB Readers Group SID.-->
+	</Entry>
+</PolicyRule>

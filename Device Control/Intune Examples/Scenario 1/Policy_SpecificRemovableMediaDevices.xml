@@ -1,7 +1,7 @@
 <PolicyRule Id="{94935edf-e1d4-472b-afb0-088cee08810f}">
-	<!--Policy_SpecificRemovableMediaDevices_Permissions:Allow Read by AD Group and Specific Device Group-->
+	<!--Policy_SpecificRemovableMediaDevices:Allow Read by AD Group and Specific Device Group-->
 	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b94935edf-e1d4-472b-afb0-088cee08810f%7d/RuleData-->
-	<Name>Policy_SpecificRemovableMediaDevices_Permissions</Name>
+	<Name>Policy_SpecificRemovableMediaDevices</Name>
 	<IncludedIdList>
 		<GroupId>{39a76f23-ccba-44ec-b131-941baf0ab689}</GroupId><!-- SpecificRemovableMediaDevices-->
 	</IncludedIdList>

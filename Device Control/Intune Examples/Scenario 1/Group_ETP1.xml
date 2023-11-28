@@ -1,5 +1,5 @@
 <Group Id="{9fb02d1c-54dd-47a8-974a-40135a2216c2}">
-	<!--Group_ETP1_USBDevice:1:1 Device to User Specific Device-->
+	<!--Group_ETP1:1:1 Device to User Specific Device-->
 	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b9fb02d1c-54dd-47a8-974a-40135a2216c2%7d/GroupData-->
 	<MatchType>MatchAny</MatchType>
 	<DescriptorIdList>

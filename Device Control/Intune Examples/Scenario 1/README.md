@@ -2,12 +2,13 @@
 ## Use Cases:
 1. Default Deny All
 1. All users must have read access to all CDROM Devices
-1. An Active Directory Group must have write access to all CDROM Devices
-1. An Active Directory Group must have read access to a group of defined USB Mass Storage Devices
+1. An Active Directory Group of Users must have write access to all CDROM Devices
+1. An Active Directory Group of Users must have read access to a group of defined USB Mass Storage Devices
 1. One or more Exception to Policy must allow a 1:1 ratio between an Active Directory user and a Specific Device
+1. An Active Directory Group of Computers must have read access to a group of defined USB Mass Storage Devices only while off corporate network
 
 ## Intune Custom CSP Policies:
-| Policy | Description | OMA/URI | Value |
+| Policy | Name | OMA/URI | Value |
 | --- | --- | --- | --- |
 | <sub>1</sub> | <sub>Enable Device Control</sub> | <sub>./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled</sub> | <sub>1</sub> |
 | <sub>2</sub> | <sub>Enable Default Deny</sub> | <sub>./Vendor/MSFT/Defender/Configuration/DefaultEnforcement</sub> | <sub>2</sub> |

@@ -1,0 +1,8 @@
+<Group Id="{6ab6df58-8731-47dd-b993-dc928b4d5054}">
+	<!--Group_AllRemovableMediaDevices:All USB Mass Storage Devices-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b6ab6df58-8731-47dd-b993-dc928b4d5054d%7d/GroupData-->
+	<MatchType>MatchAny</MatchType>
+	<DescriptorIdList>
+		<PrimaryId>RemovableMediaDevices</PrimaryId>
+	</DescriptorIdList>
+</Group>

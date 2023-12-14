@@ -1,0 +1,26 @@
+<PolicyRule Id="{fca16fa3-2a10-48af-bccc-589a32b73bab}">
+	<!--Policy_ScannerStations:Allow USB Mass Storage while Off Corp Network Policy-->
+	<!--./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bfca16fa3-2a10-48af-bccc-589a32b73bab%7d/RuleData-->
+	<Name>Policy_ScannerStations</Name>
+	<IncludedIdList>
+		<GroupId>{6ab6df58-8731-47dd-b993-dc928b4d5054}</GroupId>
+	</IncludedIdList>
+	<ExcludedIdList />
+	<Entry Id="{4c9c374a-804c-4a58-a247-381d250a60aa}">
+		<Type>Allow</Type>
+		<AccessMask>9</AccessMask><!--Allow Read-->
+		<Options>0</Options><!--Do nothing-->
+		<ComputerSid>11a1fa19-3f10-4021-8f4f-2cdf65717d40</ComputerSid><!-- AD Computer SID-->
+    <Parameters MatchType="MatchAny">
+      <Network MatchType="MatchAny">
+        <GroupId>{8330c081-4d20-4713-82c6-7a69cf110281}</GroupId>
+      </Network>
+    </Parameters>
+	</Entry>
+	<Entry Id="{98e00040-64f7-434f-9f66-1fe5f854c3f3}">
+		<Type>AuditAllowed</Type>
+		<AccessMask>9</AccessMask><!--Audit Allowed Read-->
+		<Options>2</Options><!--Send event-->
+		<ComputerSid>11a1fa19-3f10-4021-8f4f-2cdf65717d40</ComputerSid><!-- AD Computer SID-->
+	</Entry>
+</PolicyRule>

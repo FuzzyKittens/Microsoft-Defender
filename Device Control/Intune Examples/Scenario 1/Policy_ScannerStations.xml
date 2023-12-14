@@ -11,11 +11,11 @@
 		<AccessMask>9</AccessMask><!--Allow Read-->
 		<Options>0</Options><!--Do nothing-->
 		<ComputerSid>11a1fa19-3f10-4021-8f4f-2cdf65717d40</ComputerSid><!-- AD Computer SID-->
-    <Parameters MatchType="MatchAny">
-      <Network MatchType="MatchAny">
-        <GroupId>{8330c081-4d20-4713-82c6-7a69cf110281}</GroupId>
-      </Network>
-    </Parameters>
+		<Parameters MatchType="MatchAny">
+			<Network MatchType="MatchAny">
+		        	<GroupId>{8330c081-4d20-4713-82c6-7a69cf110281}</GroupId>
+			</Network>
+		</Parameters>
 	</Entry>
 	<Entry Id="{98e00040-64f7-434f-9f66-1fe5f854c3f3}">
 		<Type>AuditAllowed</Type>

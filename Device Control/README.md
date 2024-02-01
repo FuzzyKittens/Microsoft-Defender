@@ -31,3 +31,16 @@ For troubleshooting network config, these are the properties that are used in th
 ```powershell
 Get-NetConnectionProfile 
 ```
+
+For troubleshooting XML files for format errors:
+
+```powershell
+$rulesXML="C:\Policies\PolicyRules.xml"
+$groupsXML="C:\Policies\Groups.xml"
+$defenderPath= (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender" -Name "InstallLocation").InstallLocation
+
+#Test PolicyRules
+& $defenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $rulesXML -rules
+#Test Groups
+& $defenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $groupsXML -groups
+```

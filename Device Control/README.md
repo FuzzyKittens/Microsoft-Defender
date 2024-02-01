@@ -26,6 +26,12 @@ To see what the status is of Device Control on the endpoint and the last time it
 Get-MpComputerStatus | select DeviceControlState, DeviceControlDefaultEnforcement, DeviceControlPoliciesLastUpdated
 ```
 
+Device Control Log location (MPDeviceControl-yyyymmdd-abcdef.log):
+
+```
+c:\ProgramData\Microsoft\Windows Defender\Support
+```
+
 For troubleshooting network config, these are the properties that are used in the check:
 
 ```powershell

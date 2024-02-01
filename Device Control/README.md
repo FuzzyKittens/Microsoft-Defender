@@ -25,3 +25,9 @@ To see what the status is of Device Control on the endpoint and the last time it
 ```powershell
 Get-MpComputerStatus | select DeviceControlState, DeviceControlDefaultEnforcement, DeviceControlPoliciesLastUpdated
 ```
+
+For troubleshooting network config, these are the properties that are used in the check:
+
+```powershell
+Get-NetConnectionProfile 
+```

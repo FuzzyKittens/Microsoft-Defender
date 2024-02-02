@@ -50,3 +50,28 @@ $defenderPath= (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defende
 #Test Groups
 & $defenderPath\mpcmdrun.exe -devicecontrol -testpolicyxml $groupsXML -groups
 ```
+
+For getting a clean report on Device Control actions from the Defender Portal using Advanced Hunting KQL:
+
+```
+//RemovableStoragePolicyTriggered: event triggered by Disk and file system level enforcement 
+DeviceEvents 
+| where ActionType == "RemovableStoragePolicyTriggered" 
+| extend parsed=parse_json(AdditionalFields) 
+| extend RemovableStorageAccess = tostring(parsed.RemovableStorageAccess) 
+| extend RemovableStoragePolicyVerdict = tostring(parsed.RemovableStoragePolicyVerdict) 
+| extend MediaBusType = tostring(parsed.BusType) 
+| extend MediaClassGuid = tostring(parsed.ClassGuid) 
+| extend MediaClassName = tostring(parsed.ClassName) 
+| extend MediaDeviceId = tostring(parsed.DeviceId) 
+| extend MediaInstanceId = tostring(parsed.DeviceInstanceId) 
+| extend MediaName = tostring(parsed.MediaName) 
+| extend RemovableStoragePolicy = tostring(parsed.RemovableStoragePolicy) 
+| extend MediaProductId = tostring(parsed.ProductId) 
+| extend MediaVendorId = tostring(parsed.VendorId) 
+| extend MediaSerialNumber = tostring(parsed.SerialNumber) 
+| distinct Timestamp, DeviceId, RemovableStoragePolicy, DeviceName, InitiatingProcessAccountName, ActionType, RemovableStorageAccess, RemovableStoragePolicyVerdict, MediaBusType, MediaClassGuid, MediaClassName, MediaDeviceId, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber, FolderPath, FileSize 
+| summarize arg_max(Timestamp, *) by DeviceId, RemovableStoragePolicy, DeviceName, InitiatingProcessAccountName, ActionType, RemovableStorageAccess, RemovableStoragePolicyVerdict, MediaBusType, MediaClassGuid, MediaClassName, MediaDeviceId, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber, FolderPath, FileSize 
+| project Timestamp, DeviceId, RemovableStoragePolicy, DeviceName, InitiatingProcessAccountName, ActionType, RemovableStorageAccess, RemovableStoragePolicyVerdict, MediaBusType, MediaClassGuid, MediaClassName, MediaDeviceId, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber, FolderPath, FileSize 
+| order by Timestamp desc
+```

@@ -16,8 +16,8 @@ $policyRules = Get-ItemPropertyValue -Path $regPath -Name PolicyRules
 $policyGroups | Out-File $env:TEMP\Groups.xml -Force
 $policyRules | Out-File $env:TEMP\Rules.xml -Force
 
-notepad.exe $env:TEMP\Groups.xml
-notepad.exe $env:TEMP\Rules.xml
+& notepad.exe $env:TEMP\Groups.xml
+& notepad.exe $env:TEMP\Rules.xml
 ```
 
 To see what the status is of Device Control on the endpoint and the last time it was updated, run the following:

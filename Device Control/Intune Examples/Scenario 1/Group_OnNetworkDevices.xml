@@ -1,7 +1,7 @@
 <Group Id="{8330c081-4d20-4713-82c6-7a69cf110281}" Type="Network">
-   <!--Group_OffNetworkDevices:Device not on Corp Network-->
+   <!--Group_OnNetworkDevices:Device on Corp Network-->
    <!-- ./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b8330c081-4d20-4713-82c6-7a69cf110281%7d/GroupData -->
-   <MatchType>MatchExcludeAll</MatchType>
+   <MatchType>MatchAll</MatchType>
    <DescriptorIdList>
       <NameId>corp.microsoft.com</NameId>
       <NetworkCategoryId>DomainAuthenticated</NetworkCategoryId>

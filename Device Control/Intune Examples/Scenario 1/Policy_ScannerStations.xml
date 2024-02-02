@@ -11,8 +11,8 @@
 		<AccessMask>9</AccessMask><!--Allow Read-->
 		<Options>0</Options><!--Do nothing-->
 		<ComputerSid>11a1fa19-3f10-4021-8f4f-2cdf65717d40</ComputerSid><!-- AD Computer SID-->
-		<Parameters MatchType="MatchAny">
-			<Network MatchType="MatchAny">
+		<Parameters MatchType="MatchExcludeAny"><!-- We want to exclude this allow policy from any network that matches corporate network group-->
+			<Network MatchType="MatchAny"><!-- In this case, we match up the group that includes any corporate network-->
 		        	<GroupId>{8330c081-4d20-4713-82c6-7a69cf110281}</GroupId>
 			</Network>
 		</Parameters>
